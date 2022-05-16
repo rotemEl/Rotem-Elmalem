@@ -1,9 +1,13 @@
 
+
 :root{
 --Beige:rgb(255, 238, 215);
 --flower:#f24f64;
 --dark_flower:#b12040;
 }
+
+
+
 @font-face {
     font-family: titleFont;
     src: url(Oleo_Script_Swash_Caps/OleoScriptSwashCaps-Regular.ttf);
@@ -19,6 +23,8 @@
     color: var(--flower);
     background-color: var(--Beige);
    font-family: bodyFont;
+   padding: 10px;
+    margin: 5px;
     
     
 }
@@ -27,6 +33,7 @@
 h1{
     color: var(--dark_flower);
     font-family:titleFont ;
+    
 }
 
 *:active:visited{ color: var(--dark_flower)} /*when click on link color changed*/
