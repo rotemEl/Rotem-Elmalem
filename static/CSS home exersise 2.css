@@ -33,7 +33,51 @@
 h1{
     color: var(--dark_flower);
     font-family:titleFont ;
-    
+    text-align: center;
 }
 
 *:active:visited{ color: var(--dark_flower)} /*when click on link color changed*/
+
+.gridContainer {
+    display: grid;
+grid-template-areas:'header header'
+'left right' ;
+    
+
+    background-color: antiquewhite;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+  }
+
+
+
+.header{
+ grid-area:header;
+    background-color: antiquewhite;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+}
+.left{
+    grid-area:left;
+
+    grid-column: 1/1;
+    grid-row: 2/3;
+    background-color: antiquewhite;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+}
+
+.rigth{
+    grid-area:right;
+
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    background-color: antiquewhite;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+}
