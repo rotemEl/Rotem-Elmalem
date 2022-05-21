@@ -19,6 +19,7 @@
    
 }
 
+
 *{
     box-sizing: border-box;
     color: var(--flower);
@@ -37,13 +38,22 @@ h1{
     text-align: center;
 }
 
+
+
+
 *:active:visited{ color: var(--dark_flower)} /*when click on link color changed*/
+nav li a:hover {
+    color: var(--dark_flower); /*when yoy flown above*/
+}
+
+
 
 .gridContainer {
     display: grid;
     grid-template-areas:
     'header header'
-    'item1 item2' ;
+    'item1 item2'
+    'item3 item2';
 
     background-color: antiquewhite;
     padding: 20px;
@@ -72,6 +82,21 @@ h1{
     margin: 20px;
 }
 
+.item3{
+    grid-area:item3;
+
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+}
+
+
+.active{
+    background-color: white;
+    color: rgb(128, 8, 124); 
+}
+
+
 @media only screen and (max-width: 1000px){
     .gridContainer {
     display: grid;
@@ -88,4 +113,18 @@ margin: 20px;
 }
 }
 
+
+.animation{
+  
+    animation: jump .5s linear alternate 10;
+    vertical-align: middle;
+   
+}
+
+
+@keyframes jump{
+    0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
+    40%  {transform: translate3d(0,30%,0) scale3d(.7,1.5,1);}
+    100% {transform: translate3d(0,100%,0) scale3d(1.5,.7,1);}
+}
 
