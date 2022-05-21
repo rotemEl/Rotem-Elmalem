@@ -3,10 +3,25 @@
 :root{
 --Beige:rgb(255, 238, 215);
 --flower:#f24f64;
---dark_flower:#b12040;
+--dark_flower:hwb(347 13% 31%);
 }
 
+.dark_flower {
+    color: var(--dark_flower);
+}
+.flower {
+    color: var(--flower);
+}
+.Flower_picture {
+width: 10cm;
+height: inherit 10cm;
+padding: 10px;
+border: 2px solid palevioletred;
+margin: 10px;
+display: block;
+   
 
+}
 
 @font-face {
     font-family: titleFont;
@@ -27,26 +42,23 @@
    font-family: bodyFont;
    padding: 10px;
     margin: 5px;
-    
-    
 }
 
 
-h1{
-    color: var(--dark_flower);
+#title { 
     font-family:titleFont ;
     text-align: center;
 }
+   
+.active{
+    background-color: rgba(255, 255, 255, 0.471);
 
-
-
+}
 
 *:active:visited{ color: var(--dark_flower)} /*when click on link color changed*/
 nav li a:hover {
     color: var(--dark_flower); /*when yoy flown above*/
 }
-
-
 
 .gridContainer {
     display: grid;
@@ -91,12 +103,6 @@ nav li a:hover {
 }
 
 
-.active{
-    background-color: white;
-    color: rgb(128, 8, 124); 
-}
-
-
 @media only screen and (max-width: 1000px){
     .gridContainer {
     display: grid;
@@ -104,6 +110,7 @@ nav li a:hover {
     'header'
     'item1'
     'item2'
+    'item3'
     
 ;
 
@@ -114,13 +121,14 @@ margin: 20px;
 }
 
 
-.animation{
-  
+.animation{ /*integram */
+    width: 40px;
+    height: 40px;
     animation: jump .5s linear alternate 10;
     vertical-align: middle;
+    margin-inline: 10px;
    
 }
-
 
 @keyframes jump{
     0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
